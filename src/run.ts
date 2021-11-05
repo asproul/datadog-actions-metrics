@@ -13,6 +13,7 @@ type Inputs = {
   githubToken: string
   githubTokenForRateLimitMetrics: string
   datadogApiKey?: string
+  datadogSite?: string
   collectJobMetrics: boolean
 }
 
@@ -84,9 +85,9 @@ const submitMetrics = async (series: Series[], inputs: Inputs) => {
       authMethods: { apiKeyAuth: inputs.datadogApiKey },
     })
 
-    if (process.env.DD_SITE) {
+    if (inputs.datadogSite) {
       v1.setServerVariables(configuration, {
-        site: process.env.DD_SITE,
+        site: inputs.datadogSite,
       })
     }
 
