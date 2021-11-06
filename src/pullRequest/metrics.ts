@@ -34,35 +34,30 @@ export const computePullRequestOpenedMetrics = (e: PullRequestOpenedEvent): Seri
   const t = unixTime(e.pull_request.created_at)
   return [
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_opened.total',
       type: 'count',
       points: [[t, 1]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_opened.commits',
       type: 'count',
       points: [[t, e.pull_request.commits]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_opened.changed_files',
       type: 'count',
       points: [[t, e.pull_request.changed_files]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_opened.additions',
       type: 'count',
       points: [[t, e.pull_request.additions]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_opened.deletions',
       type: 'count',
@@ -78,42 +73,36 @@ export const computePullRequestClosedMetrics = (e: PullRequestClosedEvent): Seri
   const t = unixTime(e.pull_request.closed_at)
   return [
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_closed.total',
       type: 'count',
       points: [[t, 1]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_closed.since_opened_seconds',
       type: 'gauge',
       points: [[t, (Date.parse(e.pull_request.closed_at) - Date.parse(e.pull_request.created_at)) / 1000]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_closed.commits',
       type: 'count',
       points: [[t, e.pull_request.commits]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_closed.changed_files',
       type: 'count',
       points: [[t, e.pull_request.changed_files]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_closed.additions',
       type: 'count',
       points: [[t, e.pull_request.additions]],
     },
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.pull_request_closed.deletions',
       type: 'count',

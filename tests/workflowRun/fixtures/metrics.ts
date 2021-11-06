@@ -2,7 +2,6 @@ import { Series } from '@datadog/datadog-api-client/dist/packages/datadog-api-cl
 
 export const exampleWorkflowRunMetrics: Series[] = [
   {
-    host: 'github.com',
     metric: 'github.actions.workflow_run.total',
     points: [[1579721588, 1]],
     tags: [
@@ -20,7 +19,6 @@ export const exampleWorkflowRunMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.workflow_run.conclusion.success_total',
     points: [[1579721588, 1]],
     tags: [
@@ -38,7 +36,6 @@ export const exampleWorkflowRunMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.workflow_run.duration_second',
     points: [[1579721588, 0]],
     tags: [
@@ -56,7 +53,6 @@ export const exampleWorkflowRunMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.workflow_run.queued_duration_second',
     points: [[1579721588, -179428]],
     tags: [
@@ -77,7 +73,6 @@ export const exampleWorkflowRunMetrics: Series[] = [
 
 export const exampleWorkflowRunSimpleMetrics: Series[] = [
   {
-    host: 'github.com',
     metric: 'github.actions.workflow_run.total',
     points: [[1579721588, 1]],
     tags: [
@@ -95,7 +90,6 @@ export const exampleWorkflowRunSimpleMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.workflow_run.conclusion.success_total',
     points: [[1579721588, 1]],
     tags: [
@@ -113,7 +107,6 @@ export const exampleWorkflowRunSimpleMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.workflow_run.duration_second',
     points: [[1579721588, 0]],
     tags: [
@@ -134,7 +127,6 @@ export const exampleWorkflowRunSimpleMetrics: Series[] = [
 
 export const exampleJobMetrics: Series[] = [
   {
-    host: 'github.com',
     metric: 'github.actions.job.total',
     points: [[1579542279, 1]],
     tags: [
@@ -155,7 +147,6 @@ export const exampleJobMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.job.conclusion.success_total',
     points: [[1579542279, 1]],
     tags: [
@@ -176,7 +167,6 @@ export const exampleJobMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.job.duration_second',
     points: [[1579542279, 119]],
     tags: [
@@ -197,7 +187,6 @@ export const exampleJobMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.job.queued_duration_second',
     points: [[1579542279, 0]],
     tags: [
@@ -221,7 +210,6 @@ export const exampleJobMetrics: Series[] = [
 
 export const exampleStepMetrics: Series[] = [
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542161, 1]],
     tags: [
@@ -244,7 +232,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542161, 1]],
     tags: [
@@ -267,7 +254,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542161, 1]],
     tags: [
@@ -290,7 +276,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542165, 1]],
     tags: [
@@ -313,7 +298,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542165, 1]],
     tags: [
@@ -336,7 +320,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542165, 4]],
     tags: [
@@ -359,7 +342,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542165, 1]],
     tags: [
@@ -382,7 +364,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542165, 1]],
     tags: [
@@ -405,7 +386,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542165, 0]],
     tags: [
@@ -428,7 +408,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542168, 1]],
     tags: [
@@ -451,7 +430,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542168, 1]],
     tags: [
@@ -474,7 +452,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542168, 3]],
     tags: [
@@ -497,7 +474,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542172, 1]],
     tags: [
@@ -520,7 +496,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542172, 1]],
     tags: [
@@ -543,7 +518,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542172, 4]],
     tags: [
@@ -566,7 +540,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542173, 1]],
     tags: [
@@ -589,7 +562,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542173, 1]],
     tags: [
@@ -612,7 +584,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542173, 1]],
     tags: [
@@ -635,7 +606,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542179, 1]],
     tags: [
@@ -658,7 +628,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542179, 1]],
     tags: [
@@ -681,7 +650,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542179, 6]],
     tags: [
@@ -704,7 +672,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542279, 1]],
     tags: [
@@ -727,7 +694,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542279, 1]],
     tags: [
@@ -750,7 +716,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542279, 100]],
     tags: [
@@ -773,7 +738,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542279, 1]],
     tags: [
@@ -796,7 +760,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542279, 1]],
     tags: [
@@ -819,7 +782,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542279, 0]],
     tags: [
@@ -842,7 +804,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'gauge',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.total',
     points: [[1579542279, 1]],
     tags: [
@@ -865,7 +826,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.conclusion.success_total',
     points: [[1579542279, 1]],
     tags: [
@@ -888,7 +848,6 @@ export const exampleStepMetrics: Series[] = [
     type: 'count',
   },
   {
-    host: 'github.com',
     metric: 'github.actions.step.duration_second',
     points: [[1579542279, 0]],
     tags: [

@@ -16,7 +16,6 @@ export const computePushMetrics = (e: PushEvent, now: Date): Series[] => {
   const t = now.getTime() / 1000
   return [
     {
-      host: 'github.com',
       tags,
       metric: 'github.actions.push.total',
       type: 'count',
