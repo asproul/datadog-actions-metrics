@@ -92,8 +92,18 @@ const submitMetrics = async (series: Series[], inputs: Inputs) => {
     }
 
     const metrics = new v1.MetricsApi(configuration)
-    const accepted = await metrics.submitMetrics({ body: { series } })
-    core.info(`sent as ${JSON.stringify(accepted)}`)
+
+    const params: v1.MetricsApiSubmitMetricsRequest = {
+      body: { series },
+      contentEncoding: 'deflate',
+    }
+
+    await metrics
+      .submitMetrics(params)
+      .then((data: any) => {
+        core.info(`API called successfully. Returned data: ${JSON.stringify(data)}`)
+      })
+      .catch((error: any) => core.error(error))
   }
   core.endGroup()
 }
