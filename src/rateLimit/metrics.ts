@@ -14,24 +14,28 @@ export const computeRateLimitMetrics = (e: Context, r: RateLimitResponse): Serie
 
   const series = [
     {
+      host: 'github.com',
       tags: [...tags, 'resource:core'],
       metric: 'github.actions.api_rate_limit.remaining',
       type: 'gauge',
       points: [[now, r.data.resources.core.remaining]],
     },
     {
+      host: 'github.com',
       tags: [...tags, 'resource:core'],
       metric: `github.actions.api_rate_limit.limit`,
       type: 'gauge',
       points: [[now, r.data.resources.core.limit]],
     },
     {
+      host: 'github.com',
       tags: [...tags, 'resource:search'],
       metric: 'github.actions.api_rate_limit.remaining',
       type: 'gauge',
       points: [[now, r.data.resources.search.remaining]],
     },
     {
+      host: 'github.com',
       tags: [...tags, 'resource:search'],
       metric: `github.actions.api_rate_limit.limit`,
       type: 'gauge',
@@ -42,14 +46,14 @@ export const computeRateLimitMetrics = (e: Context, r: RateLimitResponse): Serie
   if (r.data.resources.graphql) {
     series.push(
       {
-
+        host: 'github.com',
         tags: [...tags, 'resource:graphql'],
         metric: 'github.actions.api_rate_limit.remaining',
         type: 'gauge',
         points: [[now, r.data.resources.graphql.remaining]],
       },
       {
-
+        host: 'github.com',
         tags: [...tags, 'resource:graphql'],
         metric: 'github.actions.api_rate_limit.limit',
         type: 'gauge',

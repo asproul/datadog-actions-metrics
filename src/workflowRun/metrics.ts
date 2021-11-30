@@ -23,12 +23,14 @@ export const computeWorkflowRunMetrics = (
   const updatedAt = unixTime(e.workflow_run.updated_at)
   const series = [
     {
+      host: 'github.com',
       tags,
       metric: 'github.actions.workflow_run.total',
       type: 'count',
       points: [[updatedAt, 1]],
     },
     {
+      host: 'github.com',
       tags,
       metric: `github.actions.workflow_run.conclusion.${e.workflow_run.conclusion}_total`,
       type: 'count',
@@ -39,6 +41,7 @@ export const computeWorkflowRunMetrics = (
   const createdAt = unixTime(e.workflow_run.created_at)
   const duration = updatedAt - createdAt
   series.push({
+    host: 'github.com',
     tags,
     metric: 'github.actions.workflow_run.duration_second',
     type: 'gauge',
@@ -49,6 +52,7 @@ export const computeWorkflowRunMetrics = (
     const firstJobStartedAt = Math.min(...listJobsForWorkflowRun.jobs.map((j) => unixTime(j.started_at)))
     const queued = firstJobStartedAt - createdAt
     series.push({
+      host: 'github.com',
       tags,
       metric: 'github.actions.workflow_run.queued_duration_second',
       type: 'gauge',
@@ -84,12 +88,14 @@ export const computeJobMetrics = (
 
     series.push(
       {
+        host: 'github.com',
         tags,
         metric: 'github.actions.job.total',
         type: 'count',
         points: [[completedAt, 1]],
       },
       {
+        host: 'github.com',
         tags,
         metric: `github.actions.job.conclusion.${j.conclusion ?? 'null'}_total`,
         type: 'count',
@@ -100,6 +106,7 @@ export const computeJobMetrics = (
     const startedAt = unixTime(j.started_at)
     const duration = completedAt - startedAt
     series.push({
+      host: 'github.com',
       tags,
       metric: 'github.actions.job.duration_second',
       type: 'gauge',
@@ -110,6 +117,7 @@ export const computeJobMetrics = (
       const firstStepStartedAt = Math.min(...j.steps.map((s) => (s.started_at ? unixTime(s.started_at) : Infinity)))
       const queued = firstStepStartedAt - startedAt
       series.push({
+        host: 'github.com',
         tags,
         metric: 'github.actions.job.queued_duration_second',
         type: 'gauge',
@@ -153,12 +161,14 @@ export const computeStepMetrics = (
 
       series.push(
         {
+          host: 'github.com',
           tags,
           metric: 'github.actions.step.total',
           type: 'count',
           points: [[completedAt, 1]],
         },
         {
+          host: 'github.com',
           tags,
           metric: `github.actions.step.conclusion.${s.conclusion ?? 'null'}_total`,
           type: 'count',
@@ -169,6 +179,7 @@ export const computeStepMetrics = (
       const startedAt = unixTime(s.started_at)
       const duration = completedAt - startedAt
       series.push({
+        host: 'github.com',
         tags,
         metric: 'github.actions.step.duration_second',
         type: 'gauge',

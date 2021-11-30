@@ -41,36 +41,42 @@ const now = 1445412480
 
 export const exampleRateLimitMetrics: Series[] = [
   {
+    host: 'github.com',
     tags: ['repository_owner:Codertocat', 'repository_name:Hello-World', 'resource:core'],
     metric: 'github.actions.api_rate_limit.remaining',
     type: 'gauge',
     points: [[now, 3999]],
   },
   {
+    host: 'github.com',
     tags: ['repository_owner:Codertocat', 'repository_name:Hello-World', 'resource:core'],
     metric: 'github.actions.api_rate_limit.limit',
     type: 'gauge',
     points: [[now, 5000]],
   },
   {
+    host: 'github.com',
     tags: ['repository_owner:Codertocat', 'repository_name:Hello-World', 'resource:search'],
     metric: 'github.actions.api_rate_limit.remaining',
     type: 'gauge',
     points: [[now, 999]],
   },
   {
+    host: 'github.com',
     tags: ['repository_owner:Codertocat', 'repository_name:Hello-World', 'resource:search'],
     metric: 'github.actions.api_rate_limit.limit',
     type: 'gauge',
     points: [[now, 6000]],
   },
   {
+    host: 'github.com',
     tags: ['repository_owner:Codertocat', 'repository_name:Hello-World', 'resource:graphql'],
     metric: 'github.actions.api_rate_limit.remaining',
     type: 'gauge',
     points: [[now, 4999]],
   },
   {
+    host: 'github.com',
     tags: ['repository_owner:Codertocat', 'repository_name:Hello-World', 'resource:graphql'],
     metric: 'github.actions.api_rate_limit.limit',
     type: 'gauge',
